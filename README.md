@@ -1,12 +1,3 @@
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70%;
-}
-</style>
-
 # Geospatial Docker Demos
 
 ## Geoserver
