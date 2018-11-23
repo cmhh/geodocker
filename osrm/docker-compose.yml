@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  backend:
+    image: "cmhh/osrm-backend-nz"
+    build: ./osrm-backend-nz
+    container_name: osrm-backend
+    network_mode: "host"
+    ports:
+      - 5000:5000
+  commuterdata:
+    image: "osrm/osrm-frontend"
+    container_name: osrm-frontend
+    network_mode: "host"
+    ports:
+      - 9966
+    environment:
+      - OSRM_BACKEND=http://localhost:5000
